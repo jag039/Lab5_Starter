@@ -33,9 +33,7 @@ function init() {
     }
   })
 
-controls.addEventListener("input", update);
-
-function update() {
+controls.addEventListener("input", () =>{
   audio.volume =  controls.value/100;
   let num = controls.value;
   if (num == 0) {
@@ -47,6 +45,7 @@ function update() {
   } else {
     volImg.src = "assets/icons/volume-level-3.svg";
   }
-}
+});
+
 
 }
